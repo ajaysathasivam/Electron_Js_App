@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <title>Hello Electron test</title>
-    <link rel="stylesheet" href="./dist/output.css">
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite + React</title>
   </head>
   <body>
-  <section class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-blue-100 via-white to-purple-100 px-4">
-    <div class="bg-white rounded-3xl shadow-xl p-8 max-w-md w-full text-center">
-      <h1 class="text-4xl font-extrabold text-gray-800 mb-4">Welcome to Electron App</h1>
-      <p class="text-gray-600 mb-8">Get started with your modern desktop application. Experience seamless performance and beautiful design.</p>
-      <button id="get_start-btn" class="bg-blue-600 text-black cursor-pointer hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-full shadow transition duration-200 w-full mb-4">
-        Get Started
-      </button>
-      <a href="#" class="text-blue-600 hover:underline text-sm">Learn more</a>
-    </div>
-  </section>
+    <div id="root"></div>
+    <script type="module" src="./src/ui/main.jsx"></script>
   </body>
 </html>

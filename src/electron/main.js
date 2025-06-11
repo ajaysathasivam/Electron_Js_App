@@ -1,5 +1,5 @@
-const { app, BrowserWindow } = require('electron');
-const path = require('path');
+import { app, BrowserWindow } from 'electron'
+import path from 'path';
 
 function createWindow() {
     const win = new BrowserWindow({
@@ -10,7 +10,10 @@ function createWindow() {
         }
     });
 
-    win.loadFile('index.html');
+    console.log('test',)
+    // win.loadFile(path.join(app.getAppPath(),'/dist-react/index.html'));
+    win.loadURL('http://localhost:5173/')
+
 }
 
 app.whenReady().then(createWindow);
