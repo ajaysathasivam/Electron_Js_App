@@ -23,3 +23,5 @@ dist-react
 *.njsproj
 *.sln
 *.sw?
+
+out/
