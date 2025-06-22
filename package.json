@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "description": "A cross-platform desktop app built with Electron and React",
   "author": "ajay_codes_io",
-  "maintainer":"ajay_codes_io, ajay555ko@gmail.com",
+  "maintainer": "ajay_codes_io, ajay555ko@gmail.com",
   "type": "module",
   "main": "./src/electron/main.js",
   "config": {
@@ -30,9 +30,12 @@
     "make": "electron-forge make"
   },
   "dependencies": {
+    "@tailwindcss/vite": "^4.1.10",
     "electron-squirrel-startup": "^1.0.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.2",
+    "tailwindcss": "^4.1.10"
   },
   "devDependencies": {
     "@electron-forge/cli": "^7.8.1",
