@@ -5,11 +5,22 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
-
+  const [text, setText] = useState('')
+  const handleFile = async () => {
+    console.log("React: calling readFile"); // <-- frontend log
+    const text = await window.api.readFile();
+    console.log("React: got result", text); // <-- result log
+    setText(text || "No text received");
+  };
+  const handleChange = (e) => {
+    const value = e.target.value;
+    console.log("React: calling consoleLog", value); // <-- frontend log
+    window.api.consoleLog(value); // <-- call to main process
+  };
   return (
     <>
       <div>
-        
+
         <a href="https://vite.dev" target="_blank">
           {/* <img src={viteLogo} className="logo" alt="Vite logo" /> */}
         </a>
@@ -22,6 +33,11 @@ function App() {
         <button onClick={() => setCount((count) => count + 1)}>
           count is {count}
         </button>
+        <button onClick={handleFile}>
+          Read File
+        </button>
+        <p>{text} i got</p>
+        <input type="text" onChange={handleChange} />
         <p>
           Edit <code>src/App.jsx</code> and save to test HMR
         </p>
